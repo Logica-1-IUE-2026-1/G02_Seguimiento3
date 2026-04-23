@@ -1,0 +1,15 @@
+    Inicio
+    Definir función kilogramos_libras(kg)
+        z = kg * 2.20462
+    Retornar z
+    Fin
+    Inicio
+    Definir funcion gramos_onzas(g)
+        z = g * 0.035274 
+    Retornar z
+    Fin
+    Inicio
+    Definir kilogramos_toneladas(kg)
+        z = kg / 1000
+    Retornar z
+    Fin
