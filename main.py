@@ -8,7 +8,11 @@ import temperatura
 
 def menu():
     """
+<<<<<<< Updated upstream
         Esta es la función que va a funcionar como menu
+=======
+        Esta es la función que va a funcionar como menu dr dos niveles
+>>>>>>> Stashed changes
     """
     print("¡Bienvenido! \n ¿Que desea hacer?\n" \
         "1) Convertir masas\n"\
