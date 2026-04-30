@@ -1,0 +1,79 @@
+
+INICIO
+    llamar sys, seguimiento3, temperatura
+
+        imprimir("¡Bienvenido! \n ¿Que desea hacer?\n" \
+            "1) Convertir masas\n"\
+            "2) Convertir temperaturas\n"\
+            "3) Salir" )
+
+        leer var 
+        
+        mientras var <= 3 y var >= 1:
+            si var == 3:
+                sys.exit()
+            sino, si var == 2:
+                imprimir("¿Como desea convertir la temperatura?\n" \
+                    "1) celsius a fahrenheit\n"\
+                    "2) fahrenheit a celsius\n"\
+                    "3) celsius a kelvin" )
+                leer option = int(input(""))
+                retornar option
+            sino:
+                imprimir("¿Como desea convertir las masas?\n" \
+                    "a) kilogramos a libras\n"\
+                    "b) gramos a onsas\n"\
+                    "c) kilogramos a toneladas" )
+                leer option = str(input(""))
+                retornar option
+
+        retornar 0
+FIN
+INICIO
+    def main():
+        """
+            función integradora
+        """
+        llamar option_menu = menu()
+        si option_menu == 1:
+            imprimir("Ingrese la cantidad a convertir")
+            leer c 
+            llamar result = temperatura.celsius_a_fahrenheit(c)
+            imprimir(f"el valor es: {result}")
+        sino, si option_menu == 2:
+            imprimir("Ingrese la cantidad a convertir")
+            leer c 
+            llamar result = temperatura.fahrenheit_a_celsius(c)
+            imprimir(f"el valor es: {result}")
+        sino, si option_menu == 3:
+            imprimir("Ingrese la cantidad a convertir")
+            leer c 
+            llamar result = temperatura.celsius_a_kelvin(c)
+            imprimir(f"el valor es: {result}")
+        sino, si option_menu == "a":
+            imprimir("Ingrese la cantidad a convertir")
+            leer c 
+            llamar result = seguimiento3.kilogramos_libras(c)
+            imprimir(f"el valor es: {result}")
+        sino, si option_menu == "b":
+            imprimir("Ingrese la cantidad a convertir")
+            leer c 
+            llamar result = seguimiento3.gramos_onzas(c)
+            imprimir(f"el valor es: {result}")
+        sino, si:
+            imprimir("Ingrese la cantidad a convertir")
+            leer c 
+            llamar result = seguimiento3.kilogramos_toneladas(c)
+            imprimir(f"el valor es: {result}")
+
+        retornar 0
+
+
+
+    if __name__== "__main__":
+        llamar result = main()
+        si llamar result == 0:
+            imprimir("Resultado de la ejecución es exitoso")
+        sino:
+            imprimir("Resultado de la ejecución es fallido")
+FIN
